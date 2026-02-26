@@ -1,0 +1,14 @@
+## # Migration Auditor Knowledge Base
+
+---
+
+## SKU_NOT_FOUND
+When an order line references a SKU that isn't present in your products master.
+**Why it matters:** inventory allocation and fulfillment can’t proceed reliably.
+**Fix:** ensure every ordered SKU exists in Products. If you changed SKUs between systems, create a mapping table.
+
+---
+
+## SKU_HAS_WHITESPACE
+Whitespace in SKUs often breaks integrations and barcode workflows.
+**Fix:** standardize to '-' or '_' and keep SKU stable.
