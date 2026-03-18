@@ -4,6 +4,13 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from app.config import settings
 from app.io.yaml_loader import load_demo_yaml
 
